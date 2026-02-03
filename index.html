@@ -2,114 +2,195 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pure Frequencies – Sound Healing & Wellness Tools</title>
+    <title>Pure Frequencies – Sound Therapy & Healing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="XVtkXdgevpTc6JuJISJICnUgQN5B6ZHsg5el4l6EQa8" />
     <style>
+        /* General */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f9f9;
             color: #333;
-            background-color: #fafafa;
+            line-height: 1.6;
         }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+
+        /* Header */
         header {
             background-color: #fff;
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
             border-bottom: 1px solid #eee;
         }
         header h1 {
             font-size: 2.5rem;
-            margin: 0;
-            color: #1a1a1a;
+            margin: 0 0 10px;
         }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
+        header p {
+            font-size: 1.2rem;
+            margin: 0 0 20px;
         }
         .cta-btn {
+            display: inline-block;
             background-color: #000;
             color: #fff;
             padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1rem;
             border-radius: 5px;
+            font-size: 1rem;
+            transition: 0.3s;
         }
-        h2 {
-            margin-top: 1.5rem;
-            color: #222;
+        .cta-btn:hover {
+            background-color: #333;
         }
-        ul {
-            list-style-type: none;
+
+        /* Hero image placeholder */
+        .hero-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Benefits List */
+        .benefits ul {
+            list-style: none;
             padding: 0;
         }
-        ul li {
+        .benefits li {
+            background-color: #fff;
             margin: 10px 0;
-            font-size: 1.1rem;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
-        .feature-list li {
-            padding-left: 1rem;
+
+        /* Product Cards */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
+        .product-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 15px 0 10px;
+        }
+        .product-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .product-card a {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .product-card a:hover {
+            background-color: #333;
+        }
+
+        /* Footer */
         footer {
+            background-color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 0.9rem;
-            color: #777;
             border-top: 1px solid #eee;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>🎶 Welcome to Pure Frequencies</h1>
-    <p>Sound Healing Tuning Forks for Natural Stress, Pain & Sleep Relief</p>
+    <h1>🎶 Pure Frequencies</h1>
+    <p>Sound Healing Tuning Forks for Stress Relief, Sleep & Wellness</p>
     <a href="https://purefrequencies.com/" class="cta-btn">Shop Healing Tools</a>
 </header>
 
-<section>
+<section class="hero">
+    <img src="https://via.placeholder.com/1200x400?text=Sound+Healing+Tuning+Forks" alt="Sound Healing Tuning Forks" class="hero-img">
+</section>
+
+<section class="about">
     <h2>🌿 About Pure Frequencies</h2>
     <p>
         Pure Frequencies brings the power of sound, vibration, and frequency healing into modern wellness practices. 
-        This page highlights the science behind precision‑tuned tools like 
-        <a href="https://purefrequencies.com/">tuning forks for healing</a> that support relaxation, deeper sleep, emotional balance, and focus. :contentReference[oaicite:1]{index=1}
+        Explore <a href="https://purefrequencies.com/">tuning forks for healing</a>, meditation tools, and frequency-based applications for stress relief, relaxation, and mental clarity.
     </p>
 </section>
 
-<section>
-    <h2>✨ Trusted Benefits</h2>
-    <ul class="feature-list">
-        <li>🔊 Precision‑tuned sound healing tools</li>
-        <li>🧘 Supports stress relief and calm</li>
-        <li>🌙 Helps improve sleep quality</li>
-        <li>💆 Emotional balance and mindfulness support</li>
+<section class="benefits">
+    <h2>✨ Wellness Benefits</h2>
+    <ul>
+        <li>🔊 Precision‑tuned sound healing tools for stress relief</li>
+        <li>🧘 Supports meditation, mindfulness, and emotional balance</li>
+        <li>🌙 Promotes deeper, restorative sleep</li>
+        <li>💆 Enhances mental clarity and focus</li>
         <li>📈 Beginner‑friendly and scientifically grounded approach</li>
     </ul>
 </section>
 
-<section>
+<section class="products">
     <h2>📦 Popular Tuning Fork Sets</h2>
-    <p>Explore curated collections designed for different wellness goals:</p>
-    <ul>
-        <li>• Calm & Balance Collection — for peace and nervous system support</li>
-        <li>• Deep Sleep Collection — for better rest and recovery</li>
-        <li>• Clarity Collection — for focus and mental clarity</li>
-    </ul>
-    <a href="https://purefrequencies.com/collections" class="cta-btn">View All Collections</a>
-</section>
-
-<section>
-    <h2>🛠️ Why Sound Healing Works</h2>
-    <p>
-        Precision sound tools like tuning forks produce pure mechanical vibrations that interact with the body’s natural rhythms. 
-        Many users report shifts in mood, stress reduction, and improved sleep after regular use. :contentReference[oaicite:2]{index=2}
-    </p>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x150?text=Harmony+Set" alt="Harmony Set">
+            <h3>Harmony Set</h3>
+            <p>Precision tuning forks for holistic balance and relaxation.</p>
+            <a href="https://purefrequencies.com/products/harmony-set">Shop Now</a>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x150?text=Calm+Set" alt="Calm Set">
+            <h3>Calm Set</h3>
+            <p>Support stress relief and nervous system balance with these tuning forks.</p>
+            <a href="https://purefrequencies.com/collections">Shop Now</a>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x150?text=Deep+Sleep+Set" alt="Deep Sleep Set">
+            <h3>Deep Sleep Set</h3>
+            <p>Promote restorative sleep and relaxation through sound therapy.</p>
+            <a href="https://purefrequencies.com/collections">Shop Now</a>
+        </div>
+    </div>
 </section>
 
 <footer>
-    © 2026 Pure Frequencies — A Wellness Resource for Sound Healing Tools | Official Site: 
-    <a href="https://purefrequencies.com/">purefrequencies.com</a>
+    © 2026 Pure Frequencies — Official Site: <a href="https://purefrequencies.com/">purefrequencies.com</a>
 </footer>
 
 </body>
