@@ -1,171 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pure Frequencies – Sound Therapy & Healing</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="XVtkXdgevpTc6JuJISJICnUgQN5B6ZHsg5el4l6EQa8" />
-    <style>
-        /* General */
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        a {
-            color: #000;
-            text-decoration: none;
-        }
-        h1, h2, h3 {
-            color: #111;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="XVtkXdgevpTc6JuJISJICnUgQN5B6ZHsg5el4l6EQa8" />
+<title>Pure Frequencies – Sound Therapy & Healing</title>
+<style>
+    /* General Styles */
+    body {
+        margin: 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 
-        /* Header */
+    /* Header & Nav */
+    header {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        z-index: 1000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    nav a {
+        margin-left: 25px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #007BFF;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: url('https://via.placeholder.com/1200x400?text=Sound+Healing+Tuning+Forks') no-repeat center center/cover;
+        color: #fff;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    }
+    .hero .cta-btn {
+        background-color: #000;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    .hero .cta-btn:hover {
+        background-color: #007BFF;
+    }
+
+    /* Sections */
+    section {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+    h2 {
+        margin-bottom: 20px;
+        color: #111;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+
+    /* Benefits */
+    .benefits ul {
+        list-style: none;
+        padding: 0;
+    }
+    .benefits li {
+        background-color: #fff;
+        margin: 10px 0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+    }
+    .benefits li:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Product Cards */
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    .product-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    .product-card h3 {
+        margin: 15px 0 10px;
+    }
+    .product-card p {
+        font-size: 0.95rem;
+        color: #555;
+    }
+    .product-card a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .product-card a:hover {
+        background-color: #007BFF;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #fff;
+        text-align: center;
+        padding: 25px 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #eee;
+        color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
         header {
-            background-color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
+            flex-direction: column;
         }
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0 0 10px;
+        nav a {
+            margin: 10px;
         }
-        header p {
-            font-size: 1.2rem;
-            margin: 0 0 20px;
+        .hero h2 {
+            font-size: 2rem;
         }
-        .cta-btn {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 15px 30px;
-            border-radius: 5px;
+        .hero p {
             font-size: 1rem;
-            transition: 0.3s;
         }
-        .cta-btn:hover {
-            background-color: #333;
-        }
-
-        /* Hero image placeholder */
-        .hero-img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        /* Sections */
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Benefits List */
-        .benefits ul {
-            list-style: none;
-            padding: 0;
-        }
-        .benefits li {
-            background-color: #fff;
-            margin: 10px 0;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-
-        /* Product Cards */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .product-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .product-card img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .product-card h3 {
-            margin: 15px 0 10px;
-        }
-        .product-card p {
-            font-size: 0.95rem;
-            color: #555;
-        }
-        .product-card a {
-            display: inline-block;
-            margin-top: 10px;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .product-card a:hover {
-            background-color: #333;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
-            color: #777;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
 <header>
-    <h1>🎶 Pure Frequencies</h1>
-    <p>Sound Healing Tuning Forks for Stress Relief, Sleep & Wellness</p>
-    <a href="https://purefrequencies.com/" class="cta-btn">Shop Healing Tools</a>
+    <h1>Pure Frequencies</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
-    <img src="https://via.placeholder.com/1200x400?text=Sound+Healing+Tuning+Forks" alt="Sound Healing Tuning Forks" class="hero-img">
+    <h2>🎵 Sound Healing & Wellness</h2>
+    <p>Explore <a href="https://purefrequencies.com/" style="color: #fff; text-decoration: underline;">tuning forks for healing</a> for stress relief, better sleep & balance</p>
+    <a href="https://purefrequencies.com/" class="cta-btn">Shop Now</a>
 </section>
 
-<section class="about">
+<section id="about">
     <h2>🌿 About Pure Frequencies</h2>
-    <p>
-        Pure Frequencies brings the power of sound, vibration, and frequency healing into modern wellness practices. 
-        Explore <a href="https://purefrequencies.com/">tuning forks for healing</a>, meditation tools, and frequency-based applications for stress relief, relaxation, and mental clarity.
-    </p>
+    <p>Pure Frequencies brings sound, vibration, and frequency healing into modern wellness practices. Discover tuning forks, meditation tools, and applications for relaxation, focus, and emotional balance.</p>
 </section>
 
-<section class="benefits">
+<section id="benefits" class="benefits">
     <h2>✨ Wellness Benefits</h2>
     <ul>
-        <li>🔊 Precision‑tuned sound healing tools for stress relief</li>
-        <li>🧘 Supports meditation, mindfulness, and emotional balance</li>
-        <li>🌙 Promotes deeper, restorative sleep</li>
-        <li>💆 Enhances mental clarity and focus</li>
-        <li>📈 Beginner‑friendly and scientifically grounded approach</li>
+        <li>🔊 Precision‑tuned tools for stress relief and mindfulness</li>
+        <li>🧘 Supports meditation, focus, and emotional balance</li>
+        <li>🌙 Promotes restorative sleep</li>
+        <li>💆 Enhances mental clarity and calm</li>
+        <li>📈 Beginner‑friendly and scientifically grounded</li>
     </ul>
 </section>
 
-<section class="products">
+<section id="products">
     <h2>📦 Popular Tuning Fork Sets</h2>
     <div class="products">
         <div class="product-card">
@@ -187,6 +231,11 @@
             <a href="https://purefrequencies.com/collections">Shop Now</a>
         </div>
     </div>
+</section>
+
+<section id="contact">
+    <h2>📞 Contact & Learn More</h2>
+    <p>Visit the official website for in-depth guides, products, and resources: <a href="https://purefrequencies.com/">purefrequencies.com</a></p>
 </section>
 
 <footer>
